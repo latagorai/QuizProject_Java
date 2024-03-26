@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+          
+          <hibernate-mapping>
+          
+          <!-- User Model -->
+          <class name="anudip.com.entitiesLayer.Users">
+          <id name="userId">
+          <generator class="assigned"></generator>
+          </id>
+          
+          <property name="userName"></property>
+          <property name="emailId"></property>
+          </class>
+          
+          <!-- Quiz Model -->
+          <class name="anudip.com.entitiesLayer.Quizzes">
+          <id name="quizId">
+          <generator class="assigned"></generator>
+          </id>
+          
+          <property name="category"></property>
+          <property name="difficulty"></property>
+          </class>
+          
+          <!-- Questions Model -->
+          <class name="anudip.com.entitiesLayer.Questions">
+          <id name="quesId">
+          <generator class="assigned"></generator>
+          </id>
+          <property name="questionNo"></property>
+          <property name="difficulty"></property>
+          <property name="questionText"></property>
+          <property name="options"></property>
+          <property name="correctOption"></property>
+          </class>
+          
+          <!-- Options Model -->
+          <class name="anudip.com.entitiesLayer.Options">
+          <id name="optId">
+          <generator class="assigned"></generator>
+          </id>
+          <property name="optionNo"></property>
+          <property name="questionId"></property>
+          <property name="optionText"></property>
+          <property name="isCorrect"></property>
+          </class>
+          
+          <!-- Result Model -->
+          <class name="anudip.com.entitiesLayer.Results">
+          <id name="resultId">
+          <generator class="assigned"></generator> 
+          </id>
+          <property name="date"></property>
+          <property name="userId"></property>
+          <property name="quizId"></property>
+          <property name="quesId"></property>
+          <property name="optId"></property>
+          <property name="score"></property>
+          
+          </class>
+          
+          
+          </hibernate-mapping>

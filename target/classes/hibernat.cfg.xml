@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Hibernate configuration settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+ 		<property name="hibernate.connection.url">jdbc:mysql://localhost:3307/quizsAppDB</property>
+ 		<property name="hibernate.connection.username">root</property>
+ 		<property name="hibernate.connection.password"></property>
+ 		<property name="hibernate.connection.pool_size">400</property>
+ 		<property name="show_sql">true</property>
+ 		<property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+ 		<property name="hibernate.hbm2ddl.auto">update</property>
+        <!-- Add mappings for entities -->
+        <mapping class="anudip.com.entitiesLayer.Users"/>   
+ 		<mapping class="anudip.com.entitiesLayer.Quizzes"/> 
+ 		<mapping class="anudip.com.entitiesLayer.Questions"/> 		
+ 		<mapping class="anudip.com.entitiesLayer.Options"/>
+ 		<mapping class="anudip.com.entitiesLayer.Result"/>  
+    </session-factory>
+</hibernate-configuration>
